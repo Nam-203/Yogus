@@ -1,8 +1,9 @@
 import React from 'react'
 
 const MeetingRoom = ({ params }: { params: { meetId: string }}) => {
+  
   return (
-    <div>page</div>
+    <div>page {params.meetId}</div>
   )
 }
 

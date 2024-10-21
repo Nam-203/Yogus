@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import NextAuthContext from "@/context/auth.context.wrapper";
+import AntdRegistry from "./../../node_modules/@ant-design/nextjs-registry/es/AntdRegistry";
+import { Toaster } from "@/components/ui/toaster"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -17,6 +19,9 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Yogus",
   description: "Connecting people everywhere in the world.",
+  icons: {
+    icon: "/icons/logoWeb.png",
+  },
 };
 
 export default function RootLayout({
@@ -26,10 +31,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} bg-dark-2`}
-      >
-        <NextAuthContext>{children}</NextAuthContext>
+      <body className={`${geistSans.variable} ${geistMono.variable} bg-dark-2`}>
+        <NextAuthContext>
+          <AntdRegistry>
+           
+            {children}
+            <Toaster/>
+           </AntdRegistry>
+        </NextAuthContext>
       </body>
     </html>
   );
