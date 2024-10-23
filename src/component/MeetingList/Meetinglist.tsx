@@ -9,7 +9,6 @@ import { useToast } from "@/hooks/use-toast";
 
 const Meetinglist = () => {
   const { toast } = useToast();
-
   const router = useRouter();
   const [meetingState, setMeetingState] = useState<
     "isScheduleMeeting" | "isJoiningMeeting" | "isInstantMeeting" | undefined
@@ -60,7 +59,6 @@ const Meetinglist = () => {
         title: "fail to create meeting",
         description: "Friday, February 10, 2023 at 5:57 PM",
         variant: "destructive",
-
       });
     }
   };

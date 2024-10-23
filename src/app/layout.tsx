@@ -4,6 +4,7 @@ import "./globals.css";
 import NextAuthContext from "@/context/auth.context.wrapper";
 import AntdRegistry from "./../../node_modules/@ant-design/nextjs-registry/es/AntdRegistry";
 import { Toaster } from "@/components/ui/toaster"
+import "@stream-io/video-react-sdk/dist/css/styles.css";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,7 +35,6 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} bg-dark-2`}>
         <NextAuthContext>
           <AntdRegistry>
-           
             {children}
             <Toaster/>
            </AntdRegistry>
