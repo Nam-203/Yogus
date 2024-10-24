@@ -5,6 +5,7 @@ import NextAuthContext from "@/context/auth.context.wrapper";
 import AntdRegistry from "./../../node_modules/@ant-design/nextjs-registry/es/AntdRegistry";
 import { Toaster } from "@/components/ui/toaster"
 import "@stream-io/video-react-sdk/dist/css/styles.css";
+import "react-datepicker/dist/react-datepicker.css";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",

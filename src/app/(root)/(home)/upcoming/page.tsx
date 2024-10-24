@@ -1,3 +1,4 @@
+import CallList from '@/component/CallList/CallList'
 import React from 'react'
 
 const page = () => {
@@ -6,6 +7,7 @@ const page = () => {
     <h1 className=' text-3xl font-bold'>
         upComming
     </h1>
+    <CallList type ="upcomming"/>
    </section>
   )
 }
